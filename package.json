@@ -1,0 +1,49 @@
+{
+  "name": "fx-schema-generator",
+  "version": "1.0.0",
+  "description": "FaaS schema generator",
+  "main": "index.js",
+  "scripts": {
+    "autod": "autod",
+    "lint": "eslint . --ext .js",
+    "cov": "TEST_TIMEOUT=20000 egg-bin cov",
+    "test": "npm run lint && npm run test-local",
+    "test-local": "egg-bin test",
+    "pkgfiles": "egg-bin pkgfiles --check",
+    "ci": "npm run autod -- --check && npm run pkgfiles && npm run lint && npm run cov",
+    "contributors": "contributors -f plain -o AUTHORS"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/node-modules/fx-schema-generator.git"
+  },
+  "keywords": [
+    "faas",
+    "generator",
+    "tools"
+  ],
+  "author": "gxcsoccer <gxcsoccer@126.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/node-modules/fx-schema-generator/issues"
+  },
+  "homepage": "https://github.com/node-modules/fx-schema-generator#readme",
+  "engines": {
+    "node": ">= 8.0.0"
+  },
+  "ci": {
+    "type": "travis",
+    "version": "8, 10, 12"
+  },
+  "dependencies": {
+
+  },
+  "devDependencies": {
+    "autod": "^3.1.0",
+    "contributors": "^0.5.1",
+    "egg-bin": "^4.13.0",
+    "egg-ci": "^1.12.0",
+    "eslint": "^5.16.0",
+    "eslint-config-egg": "^7.4.1"
+  }
+}
